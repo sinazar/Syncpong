@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
+	<false/>
+	<key>IDESourceControlProjectIdentifier</key>
+	<string>94A7C80E-A259-4046-ACD6-B331FB101FB4</string>
+	<key>IDESourceControlProjectName</key>
+	<string>Syncpong</string>
+	<key>IDESourceControlProjectOriginsDictionary</key>
+	<dict>
+		<key>0B19A025-333A-4CD9-A15A-8DF474DC6381</key>
+		<string>https://github.com/sinazar/Syncpong.git</string>
+	</dict>
+	<key>IDESourceControlProjectPath</key>
+	<string>Syncpong.xcodeproj/project.xcworkspace</string>
+	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
+	<dict>
+		<key>0B19A025-333A-4CD9-A15A-8DF474DC6381</key>
+		<string>../..</string>
+	</dict>
+	<key>IDESourceControlProjectURL</key>
+	<string>https://github.com/sinazar/Syncpong.git</string>
+	<key>IDESourceControlProjectVersion</key>
+	<integer>110</integer>
+	<key>IDESourceControlProjectWCCIdentifier</key>
+	<string>0B19A025-333A-4CD9-A15A-8DF474DC6381</string>
+	<key>IDESourceControlProjectWCConfigurations</key>
+	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>0B19A025-333A-4CD9-A15A-8DF474DC6381</string>
+			<key>IDESourceControlWCCName</key>
+			<string>Syncpong</string>
+		</dict>
+	</array>
+</dict>
+</plist>

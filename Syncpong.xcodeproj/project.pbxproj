@@ -24,6 +24,9 @@
 		2785B527182DF0210057ABB9 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2785B502182DF0210057ABB9 /* UIKit.framework */; };
 		2785B52F182DF0210057ABB9 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 2785B52D182DF0210057ABB9 /* InfoPlist.strings */; };
 		2785B531182DF0210057ABB9 /* SyncpongTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 2785B530182DF0210057ABB9 /* SyncpongTests.m */; };
+		86580AAE182DFBEE00AD5E7F /* pong.png in Resources */ = {isa = PBXBuildFile; fileRef = 86580AAD182DFBEE00AD5E7F /* pong.png */; };
+		86580AB0182E04B700AD5E7F /* ball.png in Resources */ = {isa = PBXBuildFile; fileRef = 86580AAF182E04B700AD5E7F /* ball.png */; };
+		86580AB6182E271B00AD5E7F /* side.png in Resources */ = {isa = PBXBuildFile; fileRef = 86580AB5182E271B00AD5E7F /* side.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -60,6 +63,9 @@
 		2785B52C182DF0210057ABB9 /* SyncpongTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "SyncpongTests-Info.plist"; sourceTree = "<group>"; };
 		2785B52E182DF0210057ABB9 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		2785B530182DF0210057ABB9 /* SyncpongTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SyncpongTests.m; sourceTree = "<group>"; };
+		86580AAD182DFBEE00AD5E7F /* pong.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = pong.png; sourceTree = "<group>"; };
+		86580AAF182E04B700AD5E7F /* ball.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ball.png; sourceTree = "<group>"; };
+		86580AB5182E271B00AD5E7F /* side.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = side.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -138,6 +144,9 @@
 		2785B507182DF0210057ABB9 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				86580AB5182E271B00AD5E7F /* side.png */,
+				86580AAF182E04B700AD5E7F /* ball.png */,
+				86580AAD182DFBEE00AD5E7F /* pong.png */,
 				2785B508182DF0210057ABB9 /* Syncpong-Info.plist */,
 				2785B509182DF0210057ABB9 /* InfoPlist.strings */,
 				2785B50C182DF0210057ABB9 /* main.m */,
@@ -241,7 +250,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				2785B50B182DF0210057ABB9 /* InfoPlist.strings in Resources */,
+				86580AAE182DFBEE00AD5E7F /* pong.png in Resources */,
+				86580AB0182E04B700AD5E7F /* ball.png in Resources */,
 				2785B51E182DF0210057ABB9 /* Images.xcassets in Resources */,
+				86580AB6182E271B00AD5E7F /* side.png in Resources */,
 				2785B51C182DF0210057ABB9 /* Spaceship.png in Resources */,
 				2785B514182DF0210057ABB9 /* Main.storyboard in Resources */,
 			);
@@ -478,6 +490,7 @@
 				2785B536182DF0210057ABB9 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		2785B537182DF0210057ABB9 /* Build configuration list for PBXNativeTarget "SyncpongTests" */ = {
 			isa = XCConfigurationList;
@@ -486,6 +499,7 @@
 				2785B539182DF0210057ABB9 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
