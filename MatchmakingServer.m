@@ -158,7 +158,7 @@ ServerState;
 
 - (void)stopAcceptingConnections
 {
-	NSAssert(_serverState == ServerStateAcceptingConnections, @"Wrong state");
+	/*NSAssert(_serverState == ServerStateAcceptingConnections, @"Wrong state");*/
     
 	_serverState = ServerStateIgnoringNewConnections;
 	_session.available = NO;

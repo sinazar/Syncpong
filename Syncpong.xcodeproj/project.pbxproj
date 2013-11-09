@@ -49,6 +49,7 @@
 		86580B09182E768A00AD5E7F /* HostViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 86580B02182E768A00AD5E7F /* HostViewController.xib */; };
 		86580B0A182E768A00AD5E7F /* JoinViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 86580B04182E768A00AD5E7F /* JoinViewController.xib */; };
 		86580B0B182E768A00AD5E7F /* MainViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 86580B06182E768A00AD5E7F /* MainViewController.xib */; };
+		86580B0E182E90D100AD5E7F /* PacketGameData.m in Sources */ = {isa = PBXBuildFile; fileRef = 86580B0D182E90D100AD5E7F /* PacketGameData.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -126,6 +127,8 @@
 		86580B03182E768A00AD5E7F /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = ../../../../../Downloads/SnapPart4/Snap/en.lproj/HostViewController.xib; sourceTree = "<group>"; };
 		86580B05182E768A00AD5E7F /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = ../../../../../Downloads/SnapPart4/Snap/en.lproj/JoinViewController.xib; sourceTree = "<group>"; };
 		86580B07182E768A00AD5E7F /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = ../../../../../Downloads/SnapPart4/Snap/en.lproj/MainViewController.xib; sourceTree = "<group>"; };
+		86580B0C182E90D100AD5E7F /* PacketGameData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PacketGameData.h; sourceTree = "<group>"; };
+		86580B0D182E90D100AD5E7F /* PacketGameData.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PacketGameData.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -211,6 +214,8 @@
 				86580AE3182E71A200AD5E7F /* PacketServerReady.m */,
 				86580AE4182E71A200AD5E7F /* PacketSignInResponse.h */,
 				86580AE5182E71A200AD5E7F /* PacketSignInResponse.m */,
+				86580B0C182E90D100AD5E7F /* PacketGameData.h */,
+				86580B0D182E90D100AD5E7F /* PacketGameData.m */,
 				86580AE6182E71A200AD5E7F /* PeerCell.h */,
 				86580AE7182E71A200AD5E7F /* PeerCell.m */,
 				86580AE8182E71A200AD5E7F /* Player.h */,
@@ -383,6 +388,7 @@
 				86580AF2182E71A200AD5E7F /* MainViewController.m in Sources */,
 				86580AEF182E71A200AD5E7F /* GameViewController.m in Sources */,
 				2785B51A182DF0210057ABB9 /* MyScene.m in Sources */,
+				86580B0E182E90D100AD5E7F /* PacketGameData.m in Sources */,
 				86580AF1182E71A200AD5E7F /* JoinViewController.m in Sources */,
 				2785B517182DF0210057ABB9 /* ViewController.m in Sources */,
 				86580AFA182E71A200AD5E7F /* UIButton+SnapAdditions.m in Sources */,

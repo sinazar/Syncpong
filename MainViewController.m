@@ -21,11 +21,11 @@
     BOOL _performAnimations;
 }
 
-@synthesize sImageView = _sImageView;
+/*@synthesize sImageView = _sImageView;
 @synthesize nImageView = _nImageView;
 @synthesize aImageView = _aImageView;
 @synthesize pImageView = _pImageView;
-@synthesize jokerImageView = _jokerImageView;
+@synthesize jokerImageView = _jokerImageView;*/
 
 @synthesize hostGameButton = _hostGameButton;
 @synthesize joinGameButton = _joinGameButton;
