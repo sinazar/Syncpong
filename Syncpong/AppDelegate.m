@@ -7,12 +7,20 @@
 //
 
 #import "AppDelegate.h"
+#import "MainViewController.h"
 
 @implementation AppDelegate
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
     // Override point for customization after application launch.
+    self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
+    MainViewController * mvc = [[MainViewController alloc] initWithNibName:@"MainViewController" bundle:nil];
+    UINavigationController * nav = [[UINavigationController alloc] initWithRootViewController:mvc];
+    self.window.rootViewController = nav;
+	[self.window makeKeyAndVisible];
+    
+	[application setIdleTimerDisabled:YES];
     return YES;
 }
 							
