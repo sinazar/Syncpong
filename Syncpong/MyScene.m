@@ -7,10 +7,14 @@
 //
 
 #import "MyScene.h"
+#import "Packet.h"
+#import "Game.h"
+#import "PacketGameData.h"
 
 static const uint32_t projectileCategory = 0x1 << 0;
 static const uint32_t bodyCategory = 0x1 << 1;
 static const uint32_t wallCategory = 0x1 << 2;
+static const uint32_t topCategory = 0x1 << 3;
 
 @implementation MyScene
 {
@@ -18,6 +22,7 @@ static const uint32_t wallCategory = 0x1 << 2;
     SKSpriteNode * _ball;
     SKSpriteNode * _left;
     SKSpriteNode * _right;
+    SKSpriteNode * _top;
 }
 
 -(id)initWithSize:(CGSize)size {    
@@ -40,7 +45,7 @@ static const uint32_t wallCategory = 0x1 << 2;
         [self addChild:_pong];
         
         _left = [SKSpriteNode spriteNodeWithImageNamed:@"side.png"];
-        _left.position = CGPointMake(1, 320);
+        _left.position = CGPointMake(0, 0);
         _left.physicsBody = [SKPhysicsBody bodyWithRectangleOfSize:_left.size];
         _left.physicsBody.dynamic = YES;
         _left.physicsBody.affectedByGravity = NO;
@@ -51,8 +56,20 @@ static const uint32_t wallCategory = 0x1 << 2;
         _left.physicsBody.restitution = 0.0f;
         [self addChild:_left];
         
+        _top = [SKSpriteNode spriteNodeWithImageNamed:@"top.png"];
+        _top.position = CGPointMake(284, 300);
+        _top.physicsBody = [SKPhysicsBody bodyWithRectangleOfSize:_top.size];
+        _top.physicsBody.dynamic = YES;
+        _top.physicsBody.affectedByGravity = NO;
+        _top.physicsBody.categoryBitMask = topCategory;
+        _top.physicsBody.contactTestBitMask = projectileCategory;
+        _top.physicsBody.collisionBitMask = topCategory;
+        _top.physicsBody.friction = 0;
+        _top.physicsBody.restitution = 0.0f;
+        [self addChild:_top];
+        
         _right = [SKSpriteNode spriteNodeWithImageNamed:@"side.png"];
-        _right.position = CGPointMake(567, 320);
+        _right.position = CGPointMake(568, 320);
         _right.physicsBody = [SKPhysicsBody bodyWithRectangleOfSize:_right.size];
         _right.physicsBody.dynamic = YES;
         _right.physicsBody.affectedByGravity = NO;
@@ -99,17 +116,19 @@ static const uint32_t wallCategory = 0x1 << 2;
     if ((firstBody.categoryBitMask & projectileCategory) != 0 &&
         (secondBody.categoryBitMask & bodyCategory) != 0)
     {
-        NSLog(@"%f", secondBody.velocity.dx);
-//        secondBody.velocity = CGVectorMake(0, -secondBody.velocity.dy);
-        firstBody.velocity = CGVectorMake(firstBody.velocity.dx+secondBody.velocity.dx/2, -firstBody.velocity.dy);
+        firstBody.velocity = CGVectorMake(firstBody.velocity.dx+secondBody.velocity.dx/2, -firstBody.velocity.dy*1.01);
     }
     
     if ((firstBody.categoryBitMask & projectileCategory) != 0 &&
         (secondBody.categoryBitMask & wallCategory) != 0)
     {
-        NSLog(@"%f", secondBody.velocity.dx);
-        //        secondBody.velocity = CGVectorMake(0, -secondBody.velocity.dy);
         firstBody.velocity = CGVectorMake(-firstBody.velocity.dx, firstBody.velocity.dy);
+    }
+    
+    if ((firstBody.categoryBitMask & projectileCategory) != 0 &&
+        (secondBody.categoryBitMask & topCategory) != 0)
+    {
+        PacketGameData * pgd = [[PacketGameData alloc] initWithPacketWithX:firstBody.velocity.dx dx:firstBody.velocity.dx dy:firstBody.velocity.dy];
     }
 }
 

@@ -7,6 +7,7 @@
 //
 
 #import "PacketGameData.h"
+#import "NSData+SnapAdditions.h"
 
 @implementation PacketGameData
 
@@ -17,7 +18,7 @@
 //	return [[self class] packetWithPlayerName:playerName];
 //}
 
-- (id)initWithPacketWithPeerID:(NSNumber *)xpos :(NSNumber *)dxvel :(NSNumber *)dyvel
+- (id)initWithPacketWithX:(float)xpos dx:(float)dxvel dy:(float)dyvel
 {
     self = [super init];
     
@@ -30,7 +31,7 @@
 
 - (void)addPayloadToData:(NSMutableData *)data
 {
-	[data rw_appendString:self.playerName];
+	[data rw_appendString:[NSString stringWithFormat:@"%@", self.xpos]];
 }
 
 @end

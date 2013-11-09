@@ -14,5 +14,6 @@ static NSString * const kAnimalNodeName = @"movable";
 
 @property (nonatomic, strong) SKSpriteNode * background;
 @property (nonatomic, strong) SKSpriteNode * selectedNode;
+@property (nonatomic, strong) Game * game;
 
 @end

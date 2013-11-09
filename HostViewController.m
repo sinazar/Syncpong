@@ -89,21 +89,15 @@
 
 - (IBAction)startAction:(id)sender
 {
-//	if (_matchmakingServer != nil && [_matchmakingServer connectedClientCount] > 0)
-    if (true)
+	if (true)
 	{
-//		NSString *name = [self.nameTextField.text stringByTrimmingCharactersInSet:[NSCharacterSet whitespaceAndNewlineCharacterSet]];
-//		if ([name length] == 0)
-//			name = _matchmakingServer.session.displayName;
-//        
-//		[_matchmakingServer stopAcceptingConnections];
-//        
-//		[self.delegate hostViewController:self startGameWithSession:_matchmakingServer.session playerName:name clients:_matchmakingServer.connectedClients];
-
-        [_matchmakingServer stopAcceptingConnections];
-        ViewController * vc = [[ViewController alloc] init];
-        [[self navigationController] addChildViewController:vc];
+		NSString *name = [self.nameTextField.text stringByTrimmingCharactersInSet:[NSCharacterSet whitespaceAndNewlineCharacterSet]];
+		if ([name length] == 0)
+			name = _matchmakingServer.session.displayName;
         
+		[_matchmakingServer stopAcceptingConnections];
+        
+		[self.delegate hostViewController:self startGameWithSession:_matchmakingServer.session playerName:name clients:_matchmakingServer.connectedClients];
 	}
 }
 

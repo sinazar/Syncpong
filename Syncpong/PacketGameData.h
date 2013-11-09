@@ -11,13 +11,12 @@
 
 @interface PacketGameData : Packet
 
-@property (nonatomic, copy) NSNumber * xpos;
-@property (nonatomic, copy) NSNumber * dxvel;
-@property (nonatomic, copy) NSNumber * dyvel;
+@property (nonatomic) float xpos;
+@property (nonatomic) float dxvel;
+@property (nonatomic) float dyvel;
 
 @property (nonatomic, strong) NSString * playerName;
 
-
-- (id)initWithPacketWithPeerID:(NSNumber *)xpos :(NSNumber *)dxvel :(NSNumber *)dyvel;
+- (id)initWithPacketWithX:(float)xpos dx:(float)dxvel dy:(float)dyvel;
 
 @end

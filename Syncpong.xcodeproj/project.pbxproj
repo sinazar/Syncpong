@@ -50,6 +50,7 @@
 		86580B0A182E768A00AD5E7F /* JoinViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 86580B04182E768A00AD5E7F /* JoinViewController.xib */; };
 		86580B0B182E768A00AD5E7F /* MainViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 86580B06182E768A00AD5E7F /* MainViewController.xib */; };
 		86580B0E182E90D100AD5E7F /* PacketGameData.m in Sources */ = {isa = PBXBuildFile; fileRef = 86580B0D182E90D100AD5E7F /* PacketGameData.m */; };
+		86580B12182E9F0F00AD5E7F /* top.png in Resources */ = {isa = PBXBuildFile; fileRef = 86580B11182E9F0F00AD5E7F /* top.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -129,6 +130,7 @@
 		86580B07182E768A00AD5E7F /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = ../../../../../Downloads/SnapPart4/Snap/en.lproj/MainViewController.xib; sourceTree = "<group>"; };
 		86580B0C182E90D100AD5E7F /* PacketGameData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PacketGameData.h; sourceTree = "<group>"; };
 		86580B0D182E90D100AD5E7F /* PacketGameData.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PacketGameData.m; sourceTree = "<group>"; };
+		86580B11182E9F0F00AD5E7F /* top.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = top.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -247,6 +249,7 @@
 			children = (
 				86580AB5182E271B00AD5E7F /* side.png */,
 				86580AAF182E04B700AD5E7F /* ball.png */,
+				86580B11182E9F0F00AD5E7F /* top.png */,
 				86580AAD182DFBEE00AD5E7F /* pong.png */,
 				2785B508182DF0210057ABB9 /* Syncpong-Info.plist */,
 				2785B509182DF0210057ABB9 /* InfoPlist.strings */,
@@ -363,6 +366,7 @@
 				2785B51E182DF0210057ABB9 /* Images.xcassets in Resources */,
 				86580AB6182E271B00AD5E7F /* side.png in Resources */,
 				2785B51C182DF0210057ABB9 /* Spaceship.png in Resources */,
+				86580B12182E9F0F00AD5E7F /* top.png in Resources */,
 				86580B0A182E768A00AD5E7F /* JoinViewController.xib in Resources */,
 				2785B514182DF0210057ABB9 /* Main.storyboard in Resources */,
 			);

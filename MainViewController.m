@@ -2,6 +2,7 @@
 #import "MainViewController.h"
 #import "UIButton+SnapAdditions.h"
 #import "Game.h"
+#import "ViewController.h"
 
 @interface MainViewController ()
 @property (nonatomic, weak) IBOutlet UIImageView *sImageView;
@@ -244,10 +245,11 @@
      {
          _performAnimations = YES;
          
-         [self startGameWithBlock:^(Game *game)
-          {
-              [game startServerGameWithSession:session playerName:name clients:clients];
-          }];
+         
+//         ViewController * vc = [[ViewController alloc] initWIthGame:<#(Game *)#>];
+//         SKView * view = [[SKView alloc] init];
+//         vc.view = view;
+//         [self presentViewController:vc animated:YES completion:nil];
      }];
 }
 

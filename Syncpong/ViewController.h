@@ -8,7 +8,12 @@
 
 #import <UIKit/UIKit.h>
 #import <SpriteKit/SpriteKit.h>
+#import "Game.h"
 
 @interface ViewController : UIViewController
+
+@property (nonatomic, strong) Game * game;
+
+- (id)initWIthGame:(Game *)game;
 
 @end
