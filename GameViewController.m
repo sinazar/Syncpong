@@ -9,6 +9,9 @@
 #import "GameViewController.h"
 #import "UIFont+SnapAdditions.h"
 #import "Game.h"
+#import <SpriteKit/SpriteKit.h>
+#import "MyScene.h"
+#import "ITScene.h"
 
 @interface GameViewController ()
 
@@ -91,16 +94,36 @@
 {
 	[super viewDidLoad];
     
-	self.centerLabel.font = [UIFont rw_snapFontWithSize:18.0f];
+//	self.centerLabel.font = [UIFont rw_snapFontWithSize:18.0f];
+//    
+//	self.snapButton.hidden = YES;
+//	self.nextRoundButton.hidden = YES;
+//	self.wrongSnapImageView.hidden = YES;
+//	self.correctSnapImageView.hidden = YES;
+//    
+//	[self hidePlayerLabels];
+//	[self hideActivePlayerIndicator];
+//	[self hideSnapIndicators];
+}
+
+- (void)viewWillLayoutSubviews
+{
+    [super viewWillLayoutSubviews];
     
-	self.snapButton.hidden = YES;
-	self.nextRoundButton.hidden = YES;
-	self.wrongSnapImageView.hidden = YES;
-	self.correctSnapImageView.hidden = YES;
+    [super viewWillLayoutSubviews];
     
-	[self hidePlayerLabels];
-	[self hideActivePlayerIndicator];
-	[self hideSnapIndicators];
+    // Configure the view.
+    SKView * skView = (SKView *)self.view;
+    //    skView.showsFPS = YES;
+    //    skView.showsNodeCount = YES;
+    
+    // Create and configure the scene.
+    ITScene * scene = [MyScene sceneWithSize:skView.bounds.size];
+    scene.scaleMode = SKSceneScaleModeAspectFill;
+    scene.vc = self;
+    
+    // Present the scene.
+    [skView presentScene:scene];
 }
 
 - (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation
@@ -278,9 +301,9 @@
 
 - (void)gameDidBegin:(Game *)game
 {
-	[self showPlayerLabels];
-	[self calculateLabelFrames];
-	[self updateWinsLabels];
+//	[self showPlayerLabels];
+//	[self calculateLabelFrames];
+//	[self updateWinsLabels];
 }
 
 - (void)showPlayerLabels

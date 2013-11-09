@@ -11,6 +11,7 @@
 #import "UIFont+SnapAdditions.h"
 #import "PeerCell.h"
 #import "ViewController.h"
+#import "AppDelegate.h"
 
 @interface HostViewController ()
 @property (nonatomic, weak) IBOutlet UILabel *headingLabel;
@@ -96,6 +97,8 @@
 			name = _matchmakingServer.session.displayName;
         
 		[_matchmakingServer stopAcceptingConnections];
+
+        
         
 		[self.delegate hostViewController:self startGameWithSession:_matchmakingServer.session playerName:name clients:_matchmakingServer.connectedClients];
 	}

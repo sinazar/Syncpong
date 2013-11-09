@@ -9,6 +9,9 @@
 #import <UIKit/UIKit.h>
 
 @interface AppDelegate : UIResponder <UIApplicationDelegate>
+{
+    //BOOL isHost;
+}
 
 @property (strong, nonatomic) UIWindow *window;
 

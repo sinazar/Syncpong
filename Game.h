@@ -7,6 +7,7 @@
 //
 
 #import "Player.h"
+#import "PacketGameData.h"
 
 @class Game;
 
@@ -29,5 +30,6 @@
 - (void)startServerGameWithSession:(GKSession *)session playerName:(NSString *)name clients:(NSArray *)clients;
 - (void)quitGameWithReason:(QuitReason)reason;
 - (Player *)playerAtPosition:(PlayerPosition)position;
+- (void)gameUpdate:(PacketGameData *) data;
 
 @end

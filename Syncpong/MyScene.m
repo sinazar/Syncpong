@@ -128,7 +128,12 @@ static const uint32_t topCategory = 0x1 << 3;
     if ((firstBody.categoryBitMask & projectileCategory) != 0 &&
         (secondBody.categoryBitMask & topCategory) != 0)
     {
-        PacketGameData * pgd = [[PacketGameData alloc] initWithPacketWithX:firstBody.velocity.dx dx:firstBody.velocity.dx dy:firstBody.velocity.dy];
+        PacketGameData * pgd = [PacketGameData packetWithType:PacketTypeGameData];
+//        pgd = [[PacketGameData alloc] initWithPacketWithX:firstBody.velocity.dx dx:firstBody.velocity.dx dy:firstBody.velocity.dy];
+        pgd.xpos = firstBody.velocity.dx;
+        pgd.dxvel = firstBody.velocity.dx;
+        pgd.dyvel = firstBody.velocity.dy;
+        [[[self vc] game] gameUpdate:pgd];
     }
 }
 

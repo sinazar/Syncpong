@@ -11,6 +11,7 @@
 #import "PacketSignInResponse.h"
 #import "PacketServerReady.h"
 #import "PacketOtherClientQuit.h"
+#import "PacketGameData.h"
 
 typedef enum
 {
@@ -177,7 +178,7 @@ GameState;
             
         case PacketTypeServerQuit:
 			[self quitGameWithReason:QuitReasonServerQuit];
-			break;            
+			break;
             
 		default:
 			NSLog(@"Client received unexpected packet: %@", packet);
@@ -336,10 +337,9 @@ GameState;
 
 - (void)receiveData:(NSData *)data fromPeer:(NSString *)peerID inSession:(GKSession *)session context:(void *)context
 {
-#ifdef DEBUG
-	NSLog(@"Game: receive data from peer: %@, data: %@, length: %d", peerID, data, [data length]);
-#endif
-    
+	NSLog(@"Game: receive data from peer: %@, data: %@, length: %lu", peerID, data, (unsigned long)[data length]);
+
+
 	Packet *packet = [Packet packetWithData:data];
 	if (packet == nil)
 	{
@@ -412,5 +412,13 @@ GameState;
 		}
 	}
 }
+
+- (void)gameUpdate: (PacketGameData *) data
+{
+    NSLog(@"%f, %f, %f", data.xpos, data.dxvel, data.dyvel);
+    [self sendPacketToAllClients:data];
+}
+
+
 
 @end

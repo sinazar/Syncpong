@@ -11,6 +11,7 @@
 #import "PacketSignInResponse.h"
 #import "PacketServerReady.h"
 #import "PacketOtherClientQuit.h"
+#import "PacketGameData.h"
 
 const size_t PACKET_HEADER_SIZE = 10;
 
@@ -62,6 +63,10 @@ const size_t PACKET_HEADER_SIZE = 10;
         case PacketTypeOtherClientQuit:
 			packet = [PacketOtherClientQuit packetWithData:data];
 			break;
+            
+        case PacketTypeGameData:
+            packet = [PacketGameData packetWithData:data];
+            break;
             
 		default:
 			NSLog(@"Error: Packet has invalid type");

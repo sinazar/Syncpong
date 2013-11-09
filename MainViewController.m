@@ -246,10 +246,10 @@
          _performAnimations = YES;
          
          
-//         ViewController * vc = [[ViewController alloc] initWIthGame:<#(Game *)#>];
-//         SKView * view = [[SKView alloc] init];
-//         vc.view = view;
-//         [self presentViewController:vc animated:YES completion:nil];
+         [self startGameWithBlock:^(Game *game)
+          {
+              [game startServerGameWithSession:session playerName:name clients:clients];
+          }];
      }];
 }
 
@@ -333,8 +333,10 @@
 
 - (void)startGameWithBlock:(void (^)(Game *))block
 {
-	GameViewController *gameViewController = [[GameViewController alloc] initWithNibName:@"GameViewController" bundle:nil];
+	GameViewController *gameViewController = [[GameViewController alloc] init];
 	gameViewController.delegate = self;
+    SKView * view = [[SKView alloc] init];
+    gameViewController.view = view;
     
 	[self presentViewController:gameViewController animated:NO completion:^
      {

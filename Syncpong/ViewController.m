@@ -39,7 +39,6 @@
     // Create and configure the scene.
     SKScene * scene = [MyScene sceneWithSize:skView.bounds.size];
     scene.scaleMode = SKSceneScaleModeAspectFill;
-    [MyScene game] = self.game;
     
     // Present the scene.
     [skView presentScene:scene];
