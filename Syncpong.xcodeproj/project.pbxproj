@@ -7,6 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2742152D182EBAB3007E831B /* GameViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 27421529182EBAB3007E831B /* GameViewController.xib */; };
+		2742152E182EBAB3007E831B /* HostViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2742152A182EBAB3007E831B /* HostViewController.xib */; };
+		2742152F182EBAB3007E831B /* JoinViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2742152B182EBAB3007E831B /* JoinViewController.xib */; };
+		27421530182EBAB3007E831B /* MainViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2742152C182EBAB3007E831B /* MainViewController.xib */; };
+		2742153C182EBD4B007E831B /* pong.png in Resources */ = {isa = PBXBuildFile; fileRef = 2742153A182EBD4B007E831B /* pong.png */; };
+		2742153E182EBD8F007E831B /* ball.png in Resources */ = {isa = PBXBuildFile; fileRef = 2742153D182EBD8F007E831B /* ball.png */; };
 		2785B4FF182DF0210057ABB9 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2785B4FE182DF0210057ABB9 /* Foundation.framework */; };
 		2785B501182DF0210057ABB9 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2785B500182DF0210057ABB9 /* CoreGraphics.framework */; };
 		2785B503182DF0210057ABB9 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2785B502182DF0210057ABB9 /* UIKit.framework */; };
@@ -24,8 +30,6 @@
 		2785B527182DF0210057ABB9 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2785B502182DF0210057ABB9 /* UIKit.framework */; };
 		2785B52F182DF0210057ABB9 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 2785B52D182DF0210057ABB9 /* InfoPlist.strings */; };
 		2785B531182DF0210057ABB9 /* SyncpongTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 2785B530182DF0210057ABB9 /* SyncpongTests.m */; };
-		86580AAE182DFBEE00AD5E7F /* pong.png in Resources */ = {isa = PBXBuildFile; fileRef = 86580AAD182DFBEE00AD5E7F /* pong.png */; };
-		86580AB0182E04B700AD5E7F /* ball.png in Resources */ = {isa = PBXBuildFile; fileRef = 86580AAF182E04B700AD5E7F /* ball.png */; };
 		86580AB6182E271B00AD5E7F /* side.png in Resources */ = {isa = PBXBuildFile; fileRef = 86580AB5182E271B00AD5E7F /* side.png */; };
 		86580AD0182E717900AD5E7F /* NSData+SnapAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 86580ACD182E717900AD5E7F /* NSData+SnapAdditions.m */; };
 		86580AD1182E717900AD5E7F /* PacketOtherClientQuit.m in Sources */ = {isa = PBXBuildFile; fileRef = 86580ACF182E717900AD5E7F /* PacketOtherClientQuit.m */; };
@@ -45,10 +49,6 @@
 		86580AFB182E71A200AD5E7F /* UIFont+SnapAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 86580AED182E71A200AD5E7F /* UIFont+SnapAdditions.m */; };
 		86580AFD182E723300AD5E7F /* GameKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 86580AFC182E723300AD5E7F /* GameKit.framework */; };
 		86580AFF182E726B00AD5E7F /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 86580AFE182E726B00AD5E7F /* AVFoundation.framework */; };
-		86580B08182E768A00AD5E7F /* GameViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 86580B00182E768A00AD5E7F /* GameViewController.xib */; };
-		86580B09182E768A00AD5E7F /* HostViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 86580B02182E768A00AD5E7F /* HostViewController.xib */; };
-		86580B0A182E768A00AD5E7F /* JoinViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 86580B04182E768A00AD5E7F /* JoinViewController.xib */; };
-		86580B0B182E768A00AD5E7F /* MainViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 86580B06182E768A00AD5E7F /* MainViewController.xib */; };
 		86580B0E182E90D100AD5E7F /* PacketGameData.m in Sources */ = {isa = PBXBuildFile; fileRef = 86580B0D182E90D100AD5E7F /* PacketGameData.m */; };
 		86580B12182E9F0F00AD5E7F /* top.png in Resources */ = {isa = PBXBuildFile; fileRef = 86580B11182E9F0F00AD5E7F /* top.png */; };
 		86F57B94182F04E100025E29 /* ITScene.m in Sources */ = {isa = PBXBuildFile; fileRef = 86F57B93182F04E100025E29 /* ITScene.m */; };
@@ -65,6 +65,12 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		27421529182EBAB3007E831B /* GameViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = GameViewController.xib; sourceTree = "<group>"; };
+		2742152A182EBAB3007E831B /* HostViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HostViewController.xib; sourceTree = "<group>"; };
+		2742152B182EBAB3007E831B /* JoinViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = JoinViewController.xib; sourceTree = "<group>"; };
+		2742152C182EBAB3007E831B /* MainViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MainViewController.xib; sourceTree = "<group>"; };
+		2742153A182EBD4B007E831B /* pong.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = pong.png; sourceTree = "<group>"; };
+		2742153D182EBD8F007E831B /* ball.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ball.png; sourceTree = "<group>"; };
 		2785B4FB182DF0210057ABB9 /* Syncpong.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Syncpong.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2785B4FE182DF0210057ABB9 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		2785B500182DF0210057ABB9 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -88,8 +94,6 @@
 		2785B52C182DF0210057ABB9 /* SyncpongTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "SyncpongTests-Info.plist"; sourceTree = "<group>"; };
 		2785B52E182DF0210057ABB9 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		2785B530182DF0210057ABB9 /* SyncpongTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SyncpongTests.m; sourceTree = "<group>"; };
-		86580AAD182DFBEE00AD5E7F /* pong.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = pong.png; sourceTree = "<group>"; };
-		86580AAF182E04B700AD5E7F /* ball.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ball.png; sourceTree = "<group>"; };
 		86580AB5182E271B00AD5E7F /* side.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = side.png; sourceTree = "<group>"; };
 		86580ACC182E717900AD5E7F /* NSData+SnapAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "NSData+SnapAdditions.h"; path = "../NSData+SnapAdditions.h"; sourceTree = "<group>"; };
 		86580ACD182E717900AD5E7F /* NSData+SnapAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "NSData+SnapAdditions.m"; path = "../NSData+SnapAdditions.m"; sourceTree = "<group>"; };
@@ -125,10 +129,6 @@
 		86580AED182E71A200AD5E7F /* UIFont+SnapAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "UIFont+SnapAdditions.m"; path = "../UIFont+SnapAdditions.m"; sourceTree = "<group>"; };
 		86580AFC182E723300AD5E7F /* GameKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GameKit.framework; path = System/Library/Frameworks/GameKit.framework; sourceTree = SDKROOT; };
 		86580AFE182E726B00AD5E7F /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
-		86580B01182E768A00AD5E7F /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = ../../../../../Downloads/SnapPart4/Snap/en.lproj/GameViewController.xib; sourceTree = "<group>"; };
-		86580B03182E768A00AD5E7F /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = ../../../../../Downloads/SnapPart4/Snap/en.lproj/HostViewController.xib; sourceTree = "<group>"; };
-		86580B05182E768A00AD5E7F /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = ../../../../../Downloads/SnapPart4/Snap/en.lproj/JoinViewController.xib; sourceTree = "<group>"; };
-		86580B07182E768A00AD5E7F /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = ../../../../../Downloads/SnapPart4/Snap/en.lproj/MainViewController.xib; sourceTree = "<group>"; };
 		86580B0C182E90D100AD5E7F /* PacketGameData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PacketGameData.h; sourceTree = "<group>"; };
 		86580B0D182E90D100AD5E7F /* PacketGameData.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PacketGameData.m; sourceTree = "<group>"; };
 		86580B11182E9F0F00AD5E7F /* top.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = top.png; sourceTree = "<group>"; };
@@ -253,17 +253,17 @@
 			isa = PBXGroup;
 			children = (
 				86580AB5182E271B00AD5E7F /* side.png */,
-				86580AAF182E04B700AD5E7F /* ball.png */,
+				2742153D182EBD8F007E831B /* ball.png */,
+				2742153A182EBD4B007E831B /* pong.png */,
+				27421529182EBAB3007E831B /* GameViewController.xib */,
+				2742152A182EBAB3007E831B /* HostViewController.xib */,
+				2742152B182EBAB3007E831B /* JoinViewController.xib */,
+				2742152C182EBAB3007E831B /* MainViewController.xib */,
 				86580B11182E9F0F00AD5E7F /* top.png */,
-				86580AAD182DFBEE00AD5E7F /* pong.png */,
 				2785B508182DF0210057ABB9 /* Syncpong-Info.plist */,
 				2785B509182DF0210057ABB9 /* InfoPlist.strings */,
 				2785B50C182DF0210057ABB9 /* main.m */,
 				2785B50E182DF0210057ABB9 /* Syncpong-Prefix.pch */,
-				86580B00182E768A00AD5E7F /* GameViewController.xib */,
-				86580B02182E768A00AD5E7F /* HostViewController.xib */,
-				86580B04182E768A00AD5E7F /* JoinViewController.xib */,
-				86580B06182E768A00AD5E7F /* MainViewController.xib */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -362,18 +362,18 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				86580B08182E768A00AD5E7F /* GameViewController.xib in Resources */,
-				86580B09182E768A00AD5E7F /* HostViewController.xib in Resources */,
 				2785B50B182DF0210057ABB9 /* InfoPlist.strings in Resources */,
-				86580AAE182DFBEE00AD5E7F /* pong.png in Resources */,
-				86580AB0182E04B700AD5E7F /* ball.png in Resources */,
-				86580B0B182E768A00AD5E7F /* MainViewController.xib in Resources */,
 				2785B51E182DF0210057ABB9 /* Images.xcassets in Resources */,
+				2742153E182EBD8F007E831B /* ball.png in Resources */,
 				86580AB6182E271B00AD5E7F /* side.png in Resources */,
 				2785B51C182DF0210057ABB9 /* Spaceship.png in Resources */,
+				2742152D182EBAB3007E831B /* GameViewController.xib in Resources */,
 				86580B12182E9F0F00AD5E7F /* top.png in Resources */,
-				86580B0A182E768A00AD5E7F /* JoinViewController.xib in Resources */,
+				27421530182EBAB3007E831B /* MainViewController.xib in Resources */,
 				2785B514182DF0210057ABB9 /* Main.storyboard in Resources */,
+				2742152F182EBAB3007E831B /* JoinViewController.xib in Resources */,
+				2742152E182EBAB3007E831B /* HostViewController.xib in Resources */,
+				2742153C182EBD4B007E831B /* pong.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -458,38 +458,6 @@
 				2785B52E182DF0210057ABB9 /* en */,
 			);
 			name = InfoPlist.strings;
-			sourceTree = "<group>";
-		};
-		86580B00182E768A00AD5E7F /* GameViewController.xib */ = {
-			isa = PBXVariantGroup;
-			children = (
-				86580B01182E768A00AD5E7F /* en */,
-			);
-			name = GameViewController.xib;
-			sourceTree = "<group>";
-		};
-		86580B02182E768A00AD5E7F /* HostViewController.xib */ = {
-			isa = PBXVariantGroup;
-			children = (
-				86580B03182E768A00AD5E7F /* en */,
-			);
-			name = HostViewController.xib;
-			sourceTree = "<group>";
-		};
-		86580B04182E768A00AD5E7F /* JoinViewController.xib */ = {
-			isa = PBXVariantGroup;
-			children = (
-				86580B05182E768A00AD5E7F /* en */,
-			);
-			name = JoinViewController.xib;
-			sourceTree = "<group>";
-		};
-		86580B06182E768A00AD5E7F /* MainViewController.xib */ = {
-			isa = PBXVariantGroup;
-			children = (
-				86580B07182E768A00AD5E7F /* en */,
-			);
-			name = MainViewController.xib;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
