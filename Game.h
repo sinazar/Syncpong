@@ -8,6 +8,7 @@
 
 #import "Player.h"
 #import "PacketGameData.h"
+#import "ITScene.h"
 
 @class Game;
 
@@ -26,8 +27,8 @@
 @property (nonatomic, weak) id <GameDelegate> delegate;
 @property (nonatomic, assign) BOOL isServer;
 
-- (void)startClientGameWithSession:(GKSession *)session playerName:(NSString *)name server:(NSString *)peerID;
-- (void)startServerGameWithSession:(GKSession *)session playerName:(NSString *)name clients:(NSArray *)clients;
+- (void)startClientGameWithSession:(GKSession *)session playerName:(NSString *)name server:(NSString *)peerID isHost:(bool) isHost scene:(ITScene *) scene;
+- (void)startServerGameWithSession:(GKSession *)session playerName:(NSString *)name clients:(NSArray *)clients isHost:(bool) isHost scene:(ITScene *) scene;
 - (void)quitGameWithReason:(QuitReason)reason;
 - (Player *)playerAtPosition:(PlayerPosition)position;
 - (void)gameUpdate:(PacketGameData *) data;

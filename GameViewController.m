@@ -11,7 +11,6 @@
 #import "Game.h"
 #import <SpriteKit/SpriteKit.h>
 #import "MyScene.h"
-#import "ITScene.h"
 
 @interface GameViewController ()
 
@@ -106,6 +105,16 @@
 //	[self hideSnapIndicators];
 }
 
+- (id)initWithHost:(BOOL)isHost
+{
+    self = [super init];
+    
+    if (!self) { return nil; }
+    self.isHost = isHost;
+    
+    return self;
+}
+
 - (void)viewWillLayoutSubviews
 {
     [super viewWillLayoutSubviews];
@@ -121,6 +130,7 @@
     ITScene * scene = [MyScene sceneWithSize:skView.bounds.size];
     scene.scaleMode = SKSceneScaleModeAspectFill;
     scene.vc = self;
+    scene.isHost = self.isHost;
     
     // Present the scene.
     [skView presentScene:scene];

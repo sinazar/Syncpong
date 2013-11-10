@@ -5,4 +5,6 @@
 
 @interface MainViewController : UIViewController <HostViewControllerDelegate, JoinViewControllerDelegate, GameViewControllerDelegate>
 
+@property (nonatomic) BOOL _isHost;
+
 @end

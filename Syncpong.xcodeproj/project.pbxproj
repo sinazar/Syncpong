@@ -51,7 +51,7 @@
 		86580B0B182E768A00AD5E7F /* MainViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 86580B06182E768A00AD5E7F /* MainViewController.xib */; };
 		86580B0E182E90D100AD5E7F /* PacketGameData.m in Sources */ = {isa = PBXBuildFile; fileRef = 86580B0D182E90D100AD5E7F /* PacketGameData.m */; };
 		86580B12182E9F0F00AD5E7F /* top.png in Resources */ = {isa = PBXBuildFile; fileRef = 86580B11182E9F0F00AD5E7F /* top.png */; };
-		86580B15182EBE9B00AD5E7F /* ITScene.m in Sources */ = {isa = PBXBuildFile; fileRef = 86580B14182EBE9B00AD5E7F /* ITScene.m */; };
+		86F57B94182F04E100025E29 /* ITScene.m in Sources */ = {isa = PBXBuildFile; fileRef = 86F57B93182F04E100025E29 /* ITScene.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -132,8 +132,8 @@
 		86580B0C182E90D100AD5E7F /* PacketGameData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PacketGameData.h; sourceTree = "<group>"; };
 		86580B0D182E90D100AD5E7F /* PacketGameData.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PacketGameData.m; sourceTree = "<group>"; };
 		86580B11182E9F0F00AD5E7F /* top.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = top.png; sourceTree = "<group>"; };
-		86580B13182EBE9B00AD5E7F /* ITScene.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ITScene.h; sourceTree = "<group>"; };
-		86580B14182EBE9B00AD5E7F /* ITScene.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ITScene.m; sourceTree = "<group>"; };
+		86F57B92182F04E100025E29 /* ITScene.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ITScene.h; sourceTree = "<group>"; };
+		86F57B93182F04E100025E29 /* ITScene.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ITScene.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -199,12 +199,12 @@
 		2785B506182DF0210057ABB9 /* Syncpong */ = {
 			isa = PBXGroup;
 			children = (
+				86F57B92182F04E100025E29 /* ITScene.h */,
+				86F57B93182F04E100025E29 /* ITScene.m */,
 				86580AD2182E71A200AD5E7F /* Game.h */,
 				86580AD3182E71A200AD5E7F /* Game.m */,
 				86580AD4182E71A200AD5E7F /* GameViewController.h */,
 				86580AD5182E71A200AD5E7F /* GameViewController.m */,
-				86580B13182EBE9B00AD5E7F /* ITScene.h */,
-				86580B14182EBE9B00AD5E7F /* ITScene.m */,
 				86580AD6182E71A200AD5E7F /* HostViewController.h */,
 				86580AD7182E71A200AD5E7F /* HostViewController.m */,
 				86580AD8182E71A200AD5E7F /* JoinViewController.h */,
@@ -393,7 +393,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				86580AF7182E71A200AD5E7F /* PacketSignInResponse.m in Sources */,
-				86580B15182EBE9B00AD5E7F /* ITScene.m in Sources */,
+				86F57B94182F04E100025E29 /* ITScene.m in Sources */,
 				86580AF8182E71A200AD5E7F /* PeerCell.m in Sources */,
 				86580AF2182E71A200AD5E7F /* MainViewController.m in Sources */,
 				86580AEF182E71A200AD5E7F /* GameViewController.m in Sources */,

@@ -25,7 +25,7 @@ static const uint32_t topCategory = 0x1 << 3;
     SKSpriteNode * _top;
 }
 
--(id)initWithSize:(CGSize)size {    
+-(id)initWithSize:(CGSize)size{
     if (self = [super initWithSize:size]) {
         /* Setup your scene here */
         
@@ -81,17 +81,21 @@ static const uint32_t topCategory = 0x1 << 3;
         [self addChild:_right];
         
         _ball = [SKSpriteNode spriteNodeWithImageNamed:@"ball.png"];
-        _ball.position = CGPointMake(self.frame.size.width/2, self.frame.size.height-40);
-        _ball.physicsBody = [SKPhysicsBody bodyWithRectangleOfSize:_ball.size];
-        _ball.physicsBody.dynamic = YES;
-        _ball.physicsBody.categoryBitMask = projectileCategory;
-        _ball.physicsBody.contactTestBitMask = bodyCategory;
-        _ball.physicsBody.collisionBitMask = 0;
-        _ball.physicsBody.friction = 0;
-        _ball.physicsBody.velocity = CGVectorMake(100, 0);
-        _ball.physicsBody.restitution = 0.0f;
-        _ball.physicsBody.linearDamping = 0.0f;
-        [self addChild:_ball];
+        if (self.isHost) {
+            _ball.position = CGPointMake(self.frame.size.width/2, self.frame.size.height-40);
+            _ball.physicsBody = [SKPhysicsBody bodyWithRectangleOfSize:_ball.size];
+            _ball.physicsBody.dynamic = YES;
+            _ball.physicsBody.categoryBitMask = projectileCategory;
+            _ball.physicsBody.contactTestBitMask = bodyCategory;
+            _ball.physicsBody.collisionBitMask = 0;
+            _ball.physicsBody.friction = 0;
+            _ball.physicsBody.velocity = CGVectorMake(100, 100);
+            _ball.physicsBody.restitution = 0.0f;
+            _ball.physicsBody.linearDamping = 0.0f;
+            _ball.physicsBody.affectedByGravity = NO;
+            [self addChild:_ball];
+        } else {}
+        
         
         self.physicsWorld.contactDelegate = self;
     }
@@ -116,7 +120,7 @@ static const uint32_t topCategory = 0x1 << 3;
     if ((firstBody.categoryBitMask & projectileCategory) != 0 &&
         (secondBody.categoryBitMask & bodyCategory) != 0)
     {
-        firstBody.velocity = CGVectorMake(firstBody.velocity.dx+secondBody.velocity.dx/2, -firstBody.velocity.dy*1.01);
+        firstBody.velocity = CGVectorMake(firstBody.velocity.dx*1.1+secondBody.velocity.dx/2, -firstBody.velocity.dy*1.05);
     }
     
     if ((firstBody.categoryBitMask & projectileCategory) != 0 &&

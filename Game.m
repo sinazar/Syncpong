@@ -12,6 +12,7 @@
 #import "PacketServerReady.h"
 #import "PacketOtherClientQuit.h"
 #import "PacketGameData.h"
+#import <SpriteKit/SpriteKit.h>
 
 typedef enum
 {
@@ -56,13 +57,14 @@ GameState;
 
 #pragma mark - Game Logic
 
-- (void)startClientGameWithSession:(GKSession *)session playerName:(NSString *)name server:(NSString *)peerID
+- (void)startClientGameWithSession:(GKSession *)session playerName:(NSString *)name server:(NSString *)peerID isHost:(bool) isHost scene:(ITScene *)scene
 {
 	self.isServer = NO;
     
 	_session = session;
 	_session.available = NO;
 	_session.delegate = self;
+    _scene = scene;
 	[_session setDataReceiveHandler:self withContext:nil];
     
 	_serverPeerID = peerID;
@@ -73,13 +75,14 @@ GameState;
 	[self.delegate gameWaitingForServerReady:self];
 }
 
-- (void)startServerGameWithSession:(GKSession *)session playerName:(NSString *)name clients:(NSArray *)clients
+- (void)startServerGameWithSession:(GKSession *)session playerName:(NSString *)name clients:(NSArray *)clients isHost:(bool) isHost scene:(ITScene *)scene
 {
 	self.isServer = YES;
     
 	_session = session;
 	_session.available = NO;
 	_session.delegate = self;
+    _scene = scene;
 	[_session setDataReceiveHandler:self withContext:nil];
     
 	_state = GameStateWaitingForSignIn;
@@ -341,6 +344,27 @@ GameState;
 
 
 	Packet *packet = [Packet packetWithData:data];
+    
+    PacketGameData * some = (PacketGameData *)packet;
+    static const uint32_t projectileCategory = 0x1 << 0;
+    static const uint32_t bodyCategory = 0x1 << 1;
+    static const uint32_t wallCategory = 0x1 << 2;
+    static const uint32_t topCategory = 0x1 << 3;
+    SKSpriteNode * _ball;
+    _ball = [SKSpriteNode spriteNodeWithImageNamed:@"ball.png"];
+        _ball.position = CGPointMake(_scene.frame.size.width/2, _scene.frame.size.height-40);
+        _ball.physicsBody = [SKPhysicsBody bodyWithRectangleOfSize:_ball.size];
+        _ball.physicsBody.dynamic = YES;
+        _ball.physicsBody.categoryBitMask = projectileCategory;
+        _ball.physicsBody.contactTestBitMask = bodyCategory;
+        _ball.physicsBody.collisionBitMask = 0;
+        _ball.physicsBody.friction = 0;
+        _ball.physicsBody.velocity = CGVectorMake(100, 100);
+        _ball.physicsBody.restitution = 0.0f;
+        _ball.physicsBody.linearDamping = 0.0f;
+        _ball.physicsBody.affectedByGravity = NO;
+        [_scene addChild:_ball];
+    
 	if (packet == nil)
 	{
 		NSLog(@"Invalid packet: %@", data);

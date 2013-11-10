@@ -18,7 +18,10 @@
 
 @interface GameViewController : UIViewController <UIAlertViewDelegate, GameDelegate>
 
+- (id)initWithHost:(BOOL)isHost;
+
 @property (nonatomic, weak) id <GameViewControllerDelegate> delegate;
 @property (nonatomic, strong) Game *game;
+@property (nonatomic) BOOL isHost;
 
 @end

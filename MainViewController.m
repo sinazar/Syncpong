@@ -237,9 +237,12 @@
 	}
 }
 
-- (void)hostViewController:(HostViewController *)controller startGameWithSession:(GKSession *)session playerName:(NSString *)name clients:(NSArray *)clients
+- (void)hostViewController:(HostViewController *)controller startGameWithSession:(GKSession *)session playerName:(NSString *)name clients:(NSArray *)clients isHost:(BOOL)isHost
 {
 	_performAnimations = NO;
+    
+    __isHost = isHost;
+    
     
 	[self dismissViewControllerAnimated:NO completion:^
      {
@@ -248,7 +251,7 @@
          
          [self startGameWithBlock:^(Game *game)
           {
-              [game startServerGameWithSession:session playerName:name clients:clients];
+              [game startServerGameWithSession:session playerName:name clients:clients isHost:isHost];
           }];
      }];
 }
@@ -275,9 +278,11 @@
 	}
 }
 
-- (void)joinViewController:(JoinViewController *)controller startGameWithSession:(GKSession *)session playerName:(NSString *)name server:(NSString *)peerID
+- (void)joinViewController:(JoinViewController *)controller startGameWithSession:(GKSession *)session playerName:(NSString *)name server:(NSString *)peerID isHost:(bool) isHost
 {
 	_performAnimations = NO;
+    
+     __isHost = isHost;
     
 	[self dismissViewControllerAnimated:NO completion:^
      {
@@ -285,7 +290,7 @@
          
          [self startGameWithBlock:^(Game *game)
           {
-              [game startClientGameWithSession:session playerName:name server:peerID];
+              [game startClientGameWithSession:session playerName:name server:peerID isHost:isHost];
           }];
      }];
 }
@@ -333,7 +338,7 @@
 
 - (void)startGameWithBlock:(void (^)(Game *))block
 {
-	GameViewController *gameViewController = [[GameViewController alloc] init];
+	GameViewController *gameViewController = [[GameViewController alloc] initWithHost:__isHost];
 	gameViewController.delegate = self;
     SKView * view = [[SKView alloc] init];
     gameViewController.view = view;

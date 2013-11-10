@@ -12,7 +12,6 @@
 @interface ITScene : SKScene
 
 @property (nonatomic, strong) GameViewController * vc;
-
-
+@property (nonatomic) BOOL isHost;
 
 @end

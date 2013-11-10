@@ -168,7 +168,7 @@
 	if ([name length] == 0)
 		name = _matchmakingClient.session.displayName;
     
-	[self.delegate joinViewController:self startGameWithSession:_matchmakingClient.session playerName:name server:peerID];
+    [self.delegate joinViewController:self startGameWithSession:_matchmakingClient.session playerName:name server:peerID isHost:false];
 }
 
 - (void)matchmakingClientNoNetwork:(MatchmakingClient *)client
